@@ -4,7 +4,7 @@
 
 QGIS plugin that downloads **Landsat**, **Sentinel-2** and **MapBiomas** imagery from
 [Google Earth Engine](https://earthengine.google.com/) straight into QGIS, including **multi-year time
-series** (for example 1995 to today). Nothing goes through Google Drive: each image is saved as a GeoTIFF
+series** (for example 1995 to today). Each image is saved as a GeoTIFF
 in a folder you choose and opened in the project.
 
 ## What it does
@@ -80,7 +80,7 @@ not covered by the chosen date is filled with the nearest date (up to 8 days for
   python -m pip install earthengine-api
   ```
 
-- A **Google Cloud project registered for Earth Engine** (free for non-commercial use). See the
+- Your **own, individual Google Earth Engine project ID** (a Google Cloud project registered for Earth Engine, free for non-commercial use). Each user needs their own; the plugin does not work without it. See the
   [access guide](https://developers.google.com/earth-engine/guides/access). The first time you click
   *Connect*, your browser opens so you can sign in with Google. Commercial use requires a commercial project;
   you are responsible for following Google's terms of service.
@@ -95,10 +95,10 @@ Landsat: USGS/NASA. Sentinel-2: contains modified Copernicus Sentinel data. MapB
 ## Português
 
 Plugin do QGIS que baixa imagens **Landsat**, **Sentinel-2** e **MapBiomas** do Google Earth Engine direto
-para o QGIS, inclusive **séries multitemporais** (por exemplo 1995 até hoje), sem passar pelo Google Drive.
+para o QGIS, inclusive **séries multitemporais** (por exemplo 1995 até hoje).
 A interface acompanha o idioma do QGIS (português ou inglês). Instale a biblioteca com
-`python -m pip install earthengine-api` (no Windows, pelo *OSGeo4W Shell*) e tenha um projeto do Google Cloud
-registrado no Earth Engine.
+`python -m pip install earthengine-api` (no Windows, pelo *OSGeo4W Shell*) e tenha um ID de projeto do Google Earth Engine próprio
+(projeto do Google Cloud registrado no Earth Engine); sem ele o plugin não funciona.
 
 ## License
 

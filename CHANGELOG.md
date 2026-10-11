@@ -57,7 +57,7 @@
 ## 0.9.0
 
 - First public release.
-- Download straight to QGIS (no Google Drive); large areas are downloaded in blocks and merged.
+- Download straight to QGIS; large areas are downloaded in blocks and merged.
 - One date, best image of a year, or multi-year time series.
 - Guided first-run setup (library check, Earth Engine sign-in, project ID).
 - Resume long series by skipping images already in the folder.

@@ -9,8 +9,7 @@ Rules kept from the original workflow:
 - 8-bit output through .visualize(vis); 30 m (Landsat) or 10 m (Sentinel-2).
 
 Images are downloaded straight to a local GeoTIFF with getDownloadURL (in
-blocks when the area is large) and merged into a single file, so nothing
-goes through Google Drive.
+blocks when the area is large) and merged into a single file.
 """
 
 import math
