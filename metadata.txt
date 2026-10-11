@@ -2,8 +2,8 @@
 name=GEE Image Downloader
 qgisMinimumVersion=3.22
 qgisMaximumVersion=4.99
-description=Download Landsat, Sentinel-2 and MapBiomas images straight into QGIS, including multi-year time series.
-about=Pick a polygon layer, choose the imagery (Landsat 4/5/8/9, Sentinel-2 or MapBiomas) and download one date, the clearest image of a year, or a multi-year time series (for example 1995 to today), as a colour image and/or NDVI. Images are saved as 8-bit GeoTIFF files, without cloud masking and without clipping to the polygon, and opened in QGIS. Nothing goes through Google Drive. EXTERNAL DEPENDENCIES: the Python library earthengine-api (python -m pip install earthengine-api) and a Google Cloud project registered for Google Earth Engine (free for non-commercial use). The interface is available in English and Portuguese.
+description=Baixe imagens Landsat, Sentinel-2 e MapBiomas direto no QGIS, inclusive séries de vários anos. / Download Landsat, Sentinel-2 and MapBiomas images straight into QGIS, including multi-year time series.
+about=PORTUGUÊS: Plugin de Davi Kilmer. Escolha uma camada de polígonos, a imagem (Landsat 4/5/8/9, Sentinel-2 ou MapBiomas) e baixe uma data, a melhor imagem do ano ou uma série multitemporal (por exemplo 1995 até hoje), em composição colorida, cor natural e/ou índices de vegetação (NDVI, GNDVI, NDRE, MSAVI2, NDWI). As imagens são salvas como GeoTIFF em uma pasta e abertas no QGIS, sem passar pelo Google Drive, sem máscara de nuvens e sem recorte pelo polígono. O MapBiomas já vem com a legenda oficial. DEPENDÊNCIAS EXTERNAS: a biblioteca Python earthengine-api (python -m pip install earthengine-api) e um projeto do Google Cloud registrado no Google Earth Engine (gratuito para uso não comercial). A interface está em português e inglês. ENGLISH: Plugin by Davi Kilmer. Pick a polygon layer, choose the imagery (Landsat 4/5/8/9, Sentinel-2 or MapBiomas) and download one date, the clearest image of a year or a multi-year time series (for example 1995 to today), as a colour composite, natural colour and/or vegetation indices (NDVI, GNDVI, NDRE, MSAVI2, NDWI). Images are saved as GeoTIFF files in a folder and opened in QGIS, with nothing going through Google Drive, without cloud masking and without clipping to the polygon. MapBiomas opens with its official legend. EXTERNAL DEPENDENCIES: the Python library earthengine-api (python -m pip install earthengine-api) and a Google Cloud project registered for Google Earth Engine (free for non-commercial use). The interface is available in English and Portuguese.
 version=0.17.0
 author=Davi Kilmer
 email=davisampaiobatista@gmail.com
@@ -13,7 +13,7 @@ tracker=https://github.com/kilmer365/gee_image_downloader/issues
 tags=ndvi,gndvi,ndre,msavi2,ndwi,vegetation index,earth engine,google earth engine,landsat,sentinel-2,mapbiomas,satellite,time series,multitemporal,raster,download
 category=Raster
 icon=icon.png
-experimental=True
+experimental=False
 deprecated=False
 changelog=0.17.0
       * New vegetation indices: GNDVI, NDRE (Sentinel-2), MSAVI2 and NDWI next to NDVI, each saved as real values with its own colour ramp
