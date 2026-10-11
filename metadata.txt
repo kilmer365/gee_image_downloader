@@ -1,0 +1,48 @@
+[general]
+name=GEE Image Downloader
+qgisMinimumVersion=3.22
+qgisMaximumVersion=4.99
+description=Download Landsat, Sentinel-2 and MapBiomas images straight into QGIS, including multi-year time series.
+about=Pick a polygon layer, choose the imagery (Landsat 4/5/8/9, Sentinel-2 or MapBiomas) and download one date, the clearest image of a year, or a multi-year time series (for example 1995 to today), as a colour image and/or NDVI. Images are saved as 8-bit GeoTIFF files, without cloud masking and without clipping to the polygon, and opened in QGIS. Nothing goes through Google Drive. EXTERNAL DEPENDENCIES: the Python library earthengine-api (python -m pip install earthengine-api) and a Google Cloud project registered for Google Earth Engine (free for non-commercial use). The interface is available in English and Portuguese.
+version=0.17.0
+author=Davi Kilmer
+email=davisampaiobatista@gmail.com
+homepage=https://github.com/kilmer365/gee_image_downloader
+repository=https://github.com/kilmer365/gee_image_downloader
+tracker=https://github.com/kilmer365/gee_image_downloader/issues
+tags=ndvi,gndvi,ndre,msavi2,ndwi,vegetation index,earth engine,google earth engine,landsat,sentinel-2,mapbiomas,satellite,time series,multitemporal,raster,download
+category=Raster
+icon=icon.png
+experimental=True
+deprecated=False
+changelog=0.17.0
+      * New vegetation indices: GNDVI, NDRE (Sentinel-2), MSAVI2 and NDWI next to NDVI, each saved as real values with its own colour ramp
+      * MapBiomas now opens with the official legend (colours and class names) and saves a .qml style next to the file
+      0.16.0
+      * Own toolbar with a simplified icon, always visible; the plugin can now be found in the Processing Toolbox search
+      0.15.1
+      * New logo (toolbar icon, window icon and About box)
+      0.15.0
+      * Landsat 7 removed (stripes); Landsat 4 added next to Landsat 5 (now 'Landsat 4/5', 1982 to 2012)
+      0.14.0
+      * Automatic source now prefers Sentinel-2 (10 m) when the year has an image that is clean and complete over the area (95% clear by default, adjustable); otherwise it uses the clearest Landsat
+      0.13.0
+      * Removed the Esri World Imagery source (it did not work reliably). Layers are now added to QGIS one at a time with the map frozen meanwhile, the log is capped, and the download runs at low priority, so QGIS freezes less
+      0.12.0
+      * New: natural-colour images; Esri World Imagery (Wayback) by year, no Earth Engine needed
+      * Performance: pyramids on big rasters, cached date searches, no more freezes on big selections, size limit
+      0.11.0
+      * Background work: searching dates no longer freezes QGIS; downloads keep running with the window closed, with a progress bar in the QGIS message bar
+      0.10.0
+      * New: NDVI (vegetation index) as real values with a red-to-green style, alone or together with the colour image
+      0.9.2
+      * Fix incomplete images when the area lies on the border between satellite scenes/tracks: the empty part is now filled with the nearest dates
+      * New 'Complete the area with nearby dates' option (on by default) and '% area covered' column
+      0.9.1
+      * Fix 'Too many concurrent aggregations' when listing dates of long periods or large areas
+      * Retry automatically when Earth Engine is busy
+      0.9.0
+      * First public release
+      * Download straight to QGIS (no Google Drive), in blocks for large areas
+      * One date, best image of a year, or multi-year time series
+      * Guided first-run setup, English and Portuguese interface
